@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "WebViewController.h"
+#import "SampleObject.h"
 
 @interface DetailViewController ()
 
@@ -29,8 +30,8 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-        self.websiteAddressLabel.text = [self.detailItem description];
+        self.detailDescriptionLabel.text = [self.detailItem objectName];
+        self.websiteAddressLabel.text = [self.detailItem objectUrl];
     }
 }
 
@@ -50,8 +51,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showWeb"]) {
-        NSString *address = @"http://apple.com";
-        [[segue destinationViewController] setWebItem:address];
+        [[segue destinationViewController] setWebItem:[self.detailItem objectUrl]];
     }
 }
 
