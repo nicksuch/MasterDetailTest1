@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B061EB1F1A2D3A0900D0DA16 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B061EB1E1A2D3A0900D0DA16 /* WebViewController.m */; };
 		B089991D19E74FCD0072CD22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B089991C19E74FCD0072CD22 /* main.m */; };
 		B089992019E74FCD0072CD22 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B089991F19E74FCD0072CD22 /* AppDelegate.m */; };
 		B089992319E74FCD0072CD22 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B089992219E74FCD0072CD22 /* MasterViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B061EB1D1A2D3A0900D0DA16 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		B061EB1E1A2D3A0900D0DA16 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		B089991719E74FCD0072CD22 /* MasterDetailTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterDetailTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B089991B19E74FCD0072CD22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B089991C19E74FCD0072CD22 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				B089992219E74FCD0072CD22 /* MasterViewController.m */,
 				B089992419E74FCD0072CD22 /* DetailViewController.h */,
 				B089992519E74FCD0072CD22 /* DetailViewController.m */,
+				B061EB1D1A2D3A0900D0DA16 /* WebViewController.h */,
+				B061EB1E1A2D3A0900D0DA16 /* WebViewController.m */,
 				B089992719E74FCD0072CD22 /* Main.storyboard */,
 				B089992A19E74FCD0072CD22 /* Images.xcassets */,
 				B089992C19E74FCD0072CD22 /* LaunchScreen.xib */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B089992019E74FCD0072CD22 /* AppDelegate.m in Sources */,
+				B061EB1F1A2D3A0900D0DA16 /* WebViewController.m in Sources */,
 				B089992319E74FCD0072CD22 /* MasterViewController.m in Sources */,
 				B089991D19E74FCD0072CD22 /* main.m in Sources */,
 				B089992619E74FCD0072CD22 /* DetailViewController.m in Sources */,
@@ -418,6 +424,7 @@
 				B089993F19E74FCE0072CD22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B089994019E74FCE0072CD22 /* Build configuration list for PBXNativeTarget "MasterDetailTest1Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				B089994219E74FCE0072CD22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
