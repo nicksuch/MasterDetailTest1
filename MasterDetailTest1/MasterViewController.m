@@ -8,10 +8,12 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "SampleObject.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property (nonatomic, readonly) NSArray *textFields;
 @end
 
 @implementation MasterViewController
@@ -38,9 +40,27 @@
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
+    SampleObject *newSampleObject;
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Input"
+                                                                   message:@"Name, Website"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *nameTextField) {
+        newSampleObject.objectName = nameTextField.text;
+    }];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *websiteTextField) {
+        newSampleObject.objectUrl = websiteTextField.text;
+    }];
+    [self presentViewController:alert animated:YES completion:nil];
+    if (newSampleObject) {
+    [self.objects insertObject:newSampleObject atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 #pragma mark - Segues
@@ -48,7 +68,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        SampleObject *object = self.objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
@@ -66,7 +86,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
+    NSString *object = self.objects[indexPath.row];
     cell.textLabel.text = [object description];
     return cell;
 }
