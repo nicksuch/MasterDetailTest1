@@ -27,15 +27,9 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.webItem) {
         NSURL *url = [NSURL URLWithString:self.webItem];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
-    } else {
-        NSURL *url = [NSURL URLWithString:@"http://google.com"];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [self.webView loadRequest:request];
-    }
 }
 
 - (void)viewDidLoad {
