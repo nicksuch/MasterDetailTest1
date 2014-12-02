@@ -76,42 +76,42 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lei-5M-9Gs">
-                                <rect key="frame" x="20" y="292" width="560" height="17"/>
+                                <rect key="frame" x="20" y="148" width="560" height="17"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QU-UX-dje">
+                                <rect key="frame" x="36" y="204" width="528" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-o6-Zck">
-                                <rect key="frame" x="277" y="183" width="46" height="30"/>
+                                <rect key="frame" x="254" y="267" width="92" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="0iQ-Aw-zzo"/>
-                                    <constraint firstAttribute="width" constant="46" id="aNR-FJ-SXY"/>
+                                    <constraint firstAttribute="width" constant="92" id="aNR-FJ-SXY"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="View Website">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="ya9-LB-FAQ" kind="show" identifier="showWeb" id="3Xb-87-z99"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QU-UX-dje">
-                                <rect key="frame" x="116" y="237" width="345" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
-                            <constraint firstItem="1QU-UX-dje" firstAttribute="top" secondItem="XzF-o6-Zck" secondAttribute="bottom" constant="24" id="ACc-ob-dJn"/>
-                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="JzS-HC-Rnl"/>
-                            <constraint firstItem="1QU-UX-dje" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="100" id="fm8-QM-JUe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1QU-UX-dje" secondAttribute="trailing" constant="123" id="fsQ-OX-kK3"/>
+                            <constraint firstItem="1QU-UX-dje" firstAttribute="top" secondItem="XzF-o6-Zck" secondAttribute="bottom" constant="-93" id="ACc-ob-dJn"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" constant="-143.5" id="JzS-HC-Rnl"/>
+                            <constraint firstItem="1QU-UX-dje" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="20" id="fm8-QM-JUe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1QU-UX-dje" secondAttribute="trailing" constant="20" id="fsQ-OX-kK3"/>
                             <constraint firstAttribute="centerX" secondItem="XzF-o6-Zck" secondAttribute="centerX" id="nY8-yM-sAA"/>
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
-                            <constraint firstItem="XzF-o6-Zck" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="119" id="xNb-hw-KP1"/>
+                            <constraint firstItem="XzF-o6-Zck" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="203" id="xNb-hw-KP1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
@@ -136,12 +136,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-UD-82w">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-UD-82w">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZwE-UD-82w" secondAttribute="trailing" constant="-16" id="2TY-EM-AM3"/>
+                            <constraint firstItem="ZwE-UD-82w" firstAttribute="top" secondItem="4fY-Mz-jXU" secondAttribute="topMargin" id="DsW-ya-3LT"/>
+                            <constraint firstItem="J6L-iy-lOA" firstAttribute="top" secondItem="ZwE-UD-82w" secondAttribute="bottom" id="PSy-eD-UcU"/>
+                            <constraint firstItem="ZwE-UD-82w" firstAttribute="leading" secondItem="4fY-Mz-jXU" secondAttribute="leadingMargin" constant="-16" id="nmm-80-syl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="ZwE-UD-82w" id="Xm3-14-45z"/>

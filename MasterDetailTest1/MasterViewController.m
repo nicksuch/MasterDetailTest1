@@ -24,6 +24,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    if (!self.objects) {
+        self.objects = [[NSMutableArray alloc] init];
+    }
+    SampleObject *sampleObject1 = [[SampleObject alloc] init];
+    sampleObject1.objectName = @"Awesome Inc";
+    sampleObject1.objectUrl = @"http://awesomeinc.org";
+    [self.objects insertObject:sampleObject1 atIndex:0];
+    
+    SampleObject *sampleObject2 = [[SampleObject alloc] init];
+    sampleObject2.objectName = @"Apple";
+    sampleObject2.objectUrl = @"http://apple.com";
+    [self.objects insertObject:sampleObject2 atIndex:0];
+    
+    SampleObject *sampleObject3 = [[SampleObject alloc] init];
+    sampleObject3.objectName = @"Google";
+    sampleObject3.objectUrl = @"http://google.com";
+    [self.objects insertObject:sampleObject3 atIndex:0];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
